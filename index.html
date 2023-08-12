@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+</head>
+<body>
+  <section class="head">
+    <div class="logo">
+        <a href=" "><img src="logo.png"></a>
+    </div>
+    <div class="nav">
+        <ul>
+            <a href="#">home</a>
+            <a href="#">women</a>
+            <a href="#">men</a>
+            <a href="#">trending</a>
+            <a href="#">new</a>
+            <a href="#footer-social">contact</a>
+        </ul>
+    </div>
+    <div class="carts">
+       <a href="#cart"><img src="cart.png"></a> 
+    </div>
+</section>
+</header>
+<main>
+<div class="main" id="main">
+    <div class="contain">
+        <a href="">Hurry Up!!! Grab Your Items </a>
+        <h2>Sri Lanka Best<br>Item Collection</h2>
+        <p>You have to try with us.There are lot of collections.</p>
+    </div>
+    <div class="image">
+        <img src="img2.png">
+    </div>
+</div>
+<div class="arrow">
+    <a href=""><img src="back-arrow.png"></a>
+    <div class="arrow2">
+        <a href=""><img src="next-arrow.png"></a>
+    </div>
+</div>
+</main>
+<section>
+<div class="categories" id="categories">
+    <h2>Our Collection</h2>
+</div>
+<div class="search">
+      <input type="text" id="searchInput" placeholder="Search products">
+      <button onclick="searchProducts()">Search</button>
+    </div>
+  </header>
+  <main>
+    <div class="filters">
+      <h2>Filters</h2>
+      <label for="priceFilter">Price:</label>
+      <select id="priceFilter" onchange="applyFilters()">
+        <option value="">All</option>
+        <option value="low">Low to High</option>
+        <option value="high">High to Low</option>
+      </select>
+      <label for="categoryFilter">Category:</label>
+      <select id="categoryFilter" onchange="applyFilters()">
+        <option value="">All</option>
+        <!-- Categories will be added with JavaScript -->
+      </select>
+      <label for="brandFilter">Brand:</label>
+      <select id="brandFilter" onchange="applyFilters()">
+        <option value="">All</option>
+        <!-- Brands will be added with JavaScript -->
+      </select>
+      <button onclick="clearFilters()">Clear Filters</button>
+    </div>
+    <div class="products">
+      <!-- Product listing will be added with JavaScript -->
+    </div>
+  </main>
+  <aside class="cart" id="cart">
+    <h2>Shopping Cart</h2>
+    <div class="cart-items">
+      <!-- Shopping cart items will be added with JavaScript -->
+    </div>
+    <div class="cart-summary">
+      <p>Total Cost: $<span id="totalCost">0.00</span></p>
+      <button onclick="checkout()">Checkout</button>
+    </div>
+  </aside>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+  <script src="scripts.js"></script>
+  <footer>
+    <div class="footer-content">
+      
+      <!-- Links section -->
+      <div class="footer-links">
+        <h3>Quick Links:</h3>
+        <ul>
+          <li><a href="#main">Home</a></li>
+          <li><a href="#categories">Products</a></li>
+          <li><a href="#footer-social">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter section -->
+      <div class="footer-newsletter">
+        <h3>Subscribe to Our Newsletter:</h3>
+        <input class="newsletter-input" type="email" placeholder="Enter your email">
+        <button class="newsletter-button">Subscribe</button>
+      </div>
+
+      <!-- Social media section -->
+      <div class="footer-social" id="footer-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Copyright notice section -->
+    <div class="footer-bottom">
+      <p>&copy; D-Market. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
